@@ -1,7 +1,13 @@
 hello world.
 <script type="module">
 import './a.js'
-import 'https://sample-sub.pages.dev/b.js'
+//import 'https://sample-sub.pages.dev/b.js'
+
+const url = 'https://sample-sub.pages.dev/'
+const data = await (await fetch(url)).text();
+
+console.log(data)
+
 </script>
 <iframe src="https://sample-sub.pages.dev/" width="100%" height="5rem">
 </iframe>
