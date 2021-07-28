@@ -4,7 +4,9 @@ import './a.js'
 //import 'https://sample-sub.pages.dev/b.js'
 
 const url = 'https://sample-sub.pages.dev/'
-const data = await (await fetch(url)).text();
+const data = await (await fetch(url,{
+credentials: 'include',
+})).text();
 
 console.log(data)
 
